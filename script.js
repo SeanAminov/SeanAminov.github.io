@@ -1,4 +1,4 @@
-// --- starfield ---
+// --- starfield background ---
 const canvas = document.getElementById('stars');
 const ctx = canvas.getContext('2d', { alpha: true });
 let W, H, stars;
@@ -34,7 +34,7 @@ function animate() {
 }
 animate();
 
-// --- smooth scroll for anchors ---
+// --- smooth scroll for internal anchors ---
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const id = a.getAttribute('href').slice(1);
@@ -52,7 +52,8 @@ document.querySelectorAll('.section, .card, .project').forEach(el => {
 });
 
 // --- footer year ---
-document.getElementById('year').textContent = new Date().getFullYear();
+const y = document.getElementById('year');
+if (y) y.textContent = new Date().getFullYear();
 
 // --- progress bar (unreal courses) ---
 (function () {
@@ -86,8 +87,10 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
   document.querySelectorAll('.ue-cert img').forEach(img => {
     img.addEventListener('click', () => {
-      const fig = img.closest('figure'); const caption = fig?.querySelector('figcaption')?.textContent?.trim();
-      open(img.src, img.alt, caption);
+      const src = img.dataset.full || img.src;
+      const fig = img.closest('figure');
+      const caption = fig?.querySelector('figcaption')?.textContent?.trim();
+      open(src, img.alt, caption);
     });
   });
 
