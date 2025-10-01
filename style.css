@@ -33,7 +33,7 @@ body{
   border-bottom: 1px solid rgba(255,255,255,.06); z-index: 10;
 }
 
-.brand{ display:flex; align-items:center; gap:.6rem; font-weight: 800; letter-spacing:.3px; text-transform: lowercase; }
+.brand{ display:flex; align-items:center; gap:.6rem; font-weight: 800; letter-spacing:.3px; }
 .brand-name{ color:var(--text); text-decoration:none; font-weight:800; }
 .logo-dot{ width:.6rem; height:.6rem; border-radius:50%; background:var(--accent); box-shadow:0 0 12px rgba(255,255,255,.6); }
 
