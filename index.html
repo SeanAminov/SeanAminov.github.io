@@ -1,14 +1,242 @@
-<!-- index.html -->
 <!doctype html>
 <html lang="en">
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sean Aminov</title>
-<link rel="stylesheet" href="style.css" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sean Aminov — Software Developer</title>
+  <meta name="description" content="Sean Aminov — CS student and software developer. Projects in Unreal Engine, Java/SQLite, Unity, and simulations." />
+  <meta property="og:title" content="Sean Aminov — Software Developer" />
+  <meta property="og:description" content="Projects, experience, skills, and resume." />
+  <meta property="og:type" content="website" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
 <body>
-  <main>
-    <h1>Hi, I’m Sean Aminov</h1>
-    <p>Welcome to my personal site.</p>
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <header class="site-header">
+    <div class="brand">
+      <span class="logo-dot" aria-hidden="true"></span>
+      <a href="#top" class="brand-name">sean aminov</a>
+    </div>
+
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#about">about</a>
+      <a href="#journey">journey</a>
+      <a href="#projects">projects</a>
+      <a href="#skills">skills</a>
+      <a href="#contact">contact</a>
+      <a href="assets/Sean_Aminov_Resume.pdf" target="_blank" rel="noopener" class="nav-resume" aria-label="Open resume in a new tab">resume</a>
+    </nav>
+
+    <div class="social">
+      <!-- LinkedIn -->
+      <a class="icon-btn" href="https://linkedin.com/in/sean-aminov" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+          <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.1c.5-1 1.8-2.1 3.8-2.1 4.1 0 4.9 2.7 4.9 6.3V23h-4v-6.5c0-1.6 0-3.7-2.3-3.7-2.3 0-2.6 1.8-2.6 3.6V23h-3.8V8.5z"/>
+        </svg>
+      </a>
+      <!-- GitHub -->
+      <a class="icon-btn" href="https://github.com/SeanAminov" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+          <path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.5-1.5-1.9-1.5-1.9-1.2-.8.1-.8.1-.8 1.3.1 2 1.3 2 1.3 1.2 2 3.2 1.4 3.9 1 .1-.9.5-1.4.9-1.8-2.7-.3-5.6-1.4-5.6-6.2 0-1.4.5-2.6 1.3-3.5-.1-.3-.6-1.7.1-3.5 0 0 1-.3 3.6 1.3a12.5 12.5 0 0 1 6.6 0c2.6-1.6 3.6-1.3 3.6-1.3.7 1.8.2 3.2.1 3.5.8.9 1.3 2.1 1.3 3.5 0 4.8-2.9 5.9-5.6 6.2.5.5 1 1.3 1 2.6v3.8c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/>
+        </svg>
+      </a>
+      <!-- Email -->
+      <a class="icon-btn" href="mailto:sean.aminovs@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+          <path fill="currentColor" d="M12 13 2 6.76V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6.76L12 13z"/><path fill="currentColor" d="M22 6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2l10 6 10-6z"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>hi, i’m sean!</h1>
+        <p class="subtitle">software developer • cs student • tech enthusiast</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="assets/Sean_Aminov_Resume.pdf" target="_blank" rel="noopener">open resume ↗</a>
+          <a class="btn" href="https://linkedin.com/in/sean-aminov" target="_blank" rel="noopener">linkedin</a>
+          <a class="btn" href="https://github.com/SeanAminov" target="_blank" rel="noopener">github</a>
+        </div>
+        <a href="#journey" class="follow-link">follow my career →</a>
+      </div>
+    </section>
+
+    <!-- ABOUT / EDUCATION -->
+    <section id="about" class="section">
+      <h2 class="section-title">about</h2>
+      <p class="lede">
+        I’m a Computer Science student at San Jose State University (B.S., expected May 2027) based in San Jose, CA.
+        I love building interactive experiences—from games in Unreal/Unity to practical apps in Java and SQLite.
+      </p>
+
+      <div class="card edu">
+        <h3>San Jose State University — B.S. in Computer Science</h3>
+        <p class="meta">San Jose, California • Expected May 2027</p>
+        <p><strong>Relevant coursework:</strong> Object Oriented Programming, Data Structures and Algorithms, Computer Systems,
+        Computer Graphics, Discrete Mathematics, Linear Algebra, Calculus II, Calculus III.</p>
+      </div>
+    </section>
+
+    <!-- JOURNEY / EXPERIENCE TIMELINE -->
+    <section id="journey" class="section">
+      <h2 class="section-title">journey</h2>
+
+      <ol class="timeline">
+        <li class="tl-item">
+          <div class="tl-node"></div>
+          <div class="tl-card">
+            <header>
+              <h3>Apple — Sales Specialist</h3>
+              <span class="meta">San Jose, California • Aug 2024 – Jan 2025</span>
+            </header>
+            <ul>
+              <li>Simplified complex technical details of Apple products to help 50+ customers daily make informed decisions.</li>
+              <li>Maintained up-to-date knowledge of Apple’s hardware and software ecosystem for accurate recommendations.</li>
+              <li>Partnered with team members for protocol and product expertise.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="tl-item">
+          <div class="tl-node"></div>
+          <div class="tl-card">
+            <header>
+              <h3>Bullis Charter School — Summer Camp Leader</h3>
+              <span class="meta">Los Altos, California • Jun 2021 – Jun 2023</span>
+            </header>
+            <ul>
+              <li>Managed camper check‑in, activities, and meals to ensure a smooth daily camp experience.</li>
+              <li>Facilitated instruction by engaging students to keep them interested in class.</li>
+              <li>Created lesson plans that kept students focused and on track.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2 class="section-title">projects</h2>
+
+      <div class="grid">
+        <!-- Close Quarter Battle -->
+        <article class="card project">
+          <header class="project-head">
+            <h3>Close Quarter Battle</h3>
+            <span class="stack">Unreal Engine 5 • Blueprints • C++</span>
+            <span class="meta">Game Designer • San Jose, CA • Jul 2025 – Sep 2025</span>
+          </header>
+          <ul>
+            <li>Designed and developed a first‑person close‑quarters battle simulator in Unreal Engine 5, handling gameplay, level creation, and combat systems.</li>
+            <li>Built AI‑driven opponents and modular levels to simulate realistic tactical scenarios and improve replayability.</li>
+            <li>Optimized performance via profiling, asset management, and scalable design for smooth play on varied hardware.</li>
+          </ul>
+        </article>
+
+        <!-- Clever Cash -->
+        <article class="card project">
+          <header class="project-head">
+            <h3>Clever Cash</h3>
+            <span class="stack">Java • SQLite</span>
+            <span class="meta">Fullstack Developer • San Jose, CA • Oct 2024 – Dec 2025</span>
+          </header>
+          <ul>
+            <li>Built a free personal budgeting desktop app with a team of four; implemented SQLite for durable data storage and retrieval.</li>
+            <li>Led three teammates with a clear project plan, detailed write‑ups, and a timeline that kept delivery on track.</li>
+          </ul>
+        </article>
+
+        <!-- RPG Adventure -->
+        <article class="card project">
+          <header class="project-head">
+            <h3>RPG Adventure</h3>
+            <span class="stack">C# • Unity</span>
+            <span class="meta">Backend Developer • San Jose, CA • Oct 2023 – Dec 2023</span>
+          </header>
+          <ul>
+            <li>Contributed backend systems for a 2D RPG in Unity.</li>
+            <li>Leveled up C# proficiency and game‑design fundamentals while shipping features.</li>
+          </ul>
+        </article>
+
+        <!-- Elevator Simulation -->
+        <article class="card project">
+          <header class="project-head">
+            <h3>Elevator Simulation</h3>
+            <span class="stack">Java • Queues • Finite State Machine</span>
+            <span class="meta">Backend Developer • Los Altos, CA • Sep 2022 – Dec 2022</span>
+          </header>
+          <ul>
+            <li>Built an event‑driven simulation modeling elevator behavior.</li>
+            <li>Collaborated closely with teammates and instructor to ship components on schedule and with quality.</li>
+            <li>Modeled processes using finite state machines and queues.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2 class="section-title">technical skills</h2>
+
+      <div class="skills-grid">
+        <div>
+          <h3>Programming</h3>
+          <div class="badges">
+            <span class="badge">Java</span><span class="badge">C++</span><span class="badge">C#</span><span class="badge">C</span>
+          </div>
+        </div>
+
+        <div>
+          <h3>Game Engines</h3>
+          <div class="badges">
+            <span class="badge">Unreal Engine 5</span><span class="badge">Unity</span>
+          </div>
+        </div>
+
+        <div>
+          <h3>Tools</h3>
+          <div class="badges">
+            <span class="badge">Git</span><span class="badge">GitHub</span><span class="badge">Visual Studio</span><span class="badge">SQLite</span><span class="badge">Perforce</span>
+          </div>
+        </div>
+
+        <div>
+          <h3>Relevant Coursework</h3>
+          <div class="badges">
+            <span class="badge">OOP</span><span class="badge">Data Structures & Algos</span><span class="badge">Computer Systems</span>
+            <span class="badge">Computer Graphics</span><span class="badge">Discrete Math</span><span class="badge">Linear Algebra</span>
+            <span class="badge">Calculus II</span><span class="badge">Calculus III</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2 class="section-title">contact</h2>
+      <div class="contact-card">
+        <p><strong>Email:</strong> <a href="mailto:sean.aminovs@gmail.com">sean.aminovs@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+14153174446">+1 (415) 317‑4446</a></p>
+        <p class="contact-links">
+          <a class="btn" href="https://linkedin.com/in/sean-aminov" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="btn" href="https://github.com/SeanAminov" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="btn btn-primary" href="assets/Sean_Aminov_Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+        </p>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Sean Aminov • Built with HTML/CSS/JS • Hosted on GitHub Pages</p>
+  </footer>
 </body>
 </html>
