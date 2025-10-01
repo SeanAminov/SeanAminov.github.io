@@ -1,4 +1,4 @@
-// --- starfield background ---
+// --- Starfield background ---
 const canvas = document.getElementById('stars');
 const ctx = canvas.getContext('2d', { alpha: true });
 let W, H, stars;
@@ -34,7 +34,7 @@ function animate() {
 }
 animate();
 
-// --- smooth scroll for internal anchors ---
+// --- Smooth scroll for internal anchors ---
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const id = a.getAttribute('href').slice(1);
@@ -43,7 +43,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// --- reveal on scroll ---
+// --- Reveal on scroll ---
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
 }, { threshold: 0.15 });
@@ -51,11 +51,11 @@ document.querySelectorAll('.section, .card, .project').forEach(el => {
   el.classList.add('reveal'); observer.observe(el);
 });
 
-// --- footer year ---
+// --- Footer year ---
 const y = document.getElementById('year');
 if (y) y.textContent = new Date().getFullYear();
 
-// --- progress bar (unreal courses) ---
+// --- Progress bar (Unreal courses) ---
 (function () {
   const el = document.querySelector('.progress');
   if (!el) return;
@@ -66,7 +66,7 @@ if (y) y.textContent = new Date().getFullYear();
   el.querySelector('.progress__txt').textContent = `${complete} / ${total}`;
 })();
 
-// --- lightbox for certificates ---
+// --- Lightbox for certificates ---
 (function () {
   const lightbox = document.getElementById('lightbox');
   const imgEl = lightbox.querySelector('.lightbox__img');
