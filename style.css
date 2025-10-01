@@ -46,7 +46,13 @@ body{
 .icon-btn{ display:inline-flex; align-items:center; justify-content:center; padding:.3rem; border-radius:8px; }
 
 /* -------- hero -------- */
-.hero{ min-height: 74vh; display:flex; align-items:center; justify-content:center; text-align: left; padding: 6rem 1.5rem 3rem; }
+.hero{
+  min-height: 60vh;                 /* reduced whitespace */
+  display:flex; align-items:center; justify-content:center;
+  text-align: left; padding: 4.5rem 1.25rem 1.25rem;
+}
+.hero + .section{ padding-top: 2rem; } /* tighter spacing after hero */
+
 .hero-inner{ max-width: 980px; width: 100%; }
 .hero h1{
   font-family: "Playfair Display", Georgia, serif; font-weight: 900;
@@ -135,15 +141,27 @@ body{
 .ue-video .video-embed{ aspect-ratio: 16 / 9; width: 100%; border-radius: 12px; overflow: hidden; border:1px solid rgba(255,255,255,.15); }
 .ue-video iframe{ width:100%; height:100%; display:block; }
 
+/* Certificate grid: uniform thumbnails */
 .ue-grid{
-  display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 1rem; margin: 1rem 0;
+  display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 1rem; margin: 1rem 0;
 }
 .ue-cert{
-  background: rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.08);
+  display:flex; flex-direction:column;
+  background: rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
   border-radius: 12px; overflow: hidden; box-shadow: var(--shadow);
 }
-.ue-cert img{ width:100%; height: 220px; object-fit: cover; display:block; cursor: zoom-in; }
-.ue-cert figcaption{ padding:.6rem .8rem; color: var(--muted); border-top:1px solid rgba(255,255,255,.06); }
+.ue-cert img{
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  cursor: zoom-in;
+}
+.ue-cert figcaption{ padding:.6rem .8rem; color: var(--muted); font-size: .92rem; }
 
 .ue-spotlight .ue-docs .btn{ margin-right:.5rem; }
 
@@ -167,6 +185,7 @@ body{
 @media (max-width: 720px){
   .site-header{ grid-template-columns: 1fr auto; grid-auto-flow: row; }
   .site-nav{ display:flex; flex-wrap:wrap; gap:.6rem; }
+  .hero{ min-height: 56vh; padding: 3.5rem 1rem 1rem; } /* smaller on mobile */
 }
 @media (prefers-reduced-motion: reduce){
   *{ animation: none !important; transition: none !important; }
